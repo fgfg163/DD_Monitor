@@ -71,7 +71,7 @@ class GetMediaURL(QThread):
         self.quality = quality
 
     def getStreamUrl(self):
-        url = "https://api.live.bilibili.com/xlive/app-room/v2/index/getRoomPlayInfo"
+        url = "https://api.live.bilibili.com/xlive/web-room/v2/index/getRoomPlayInfo"
         onlyAudio = self.quality < 0
         params = {
             "appkey": "iVGUTjsxvpLeuDCf",
@@ -86,7 +86,7 @@ class GetMediaURL(QThread):
             "free_type": 0,
             "http": 1,
             "mask": 0,
-            "mobi_app": "android",
+            "mobi_app": "web",
             "network": "wifi",
             "no_playurl": 0,
             "only_audio": int(onlyAudio),
